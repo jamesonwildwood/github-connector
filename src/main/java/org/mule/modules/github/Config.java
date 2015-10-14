@@ -25,7 +25,7 @@ import org.mule.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@ConnectionManagement(friendlyName = "Configuration")
+@ConnectionManagement(friendlyName = "Configuration", configElementName="config")
 public class Config {
 
     private static final Logger logger = LoggerFactory.getLogger(Config.class);
@@ -97,7 +97,6 @@ public class Config {
         try {
             setServiceFactory(new ServiceFactory(connectionUser, connectionPassword, scope));
         } catch (IOException e) {
-            logger.error(e.getMessage());
             throw new ConnectionException(ConnectionExceptionCode.CANNOT_REACH, "", "Could not establish connection with your GitHub account. " + e.getMessage(), e);
         }
 

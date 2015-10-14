@@ -21,59 +21,21 @@
         <jdk.version>1.7</jdk.version>
     </properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.googlecode.maven-download-plugin</groupId>
-                <artifactId>download-maven-plugin</artifactId>
-                <version>1.2.1</version>
-                <executions>
-                    <execution>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>wget</goal>
-                        </goals>
-                        <configuration>
-                            <url>https://raw.githubusercontent.com/mulesoft/connector-certification-docs/develop/docs/02-coding-standards-best-practices/files/connectors-style-convention.xml</url>
-                            <outputFileName>connectors-style-convention.xml</outputFileName>
-                            <skipCache>true</skipCache>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>net.revelc.code</groupId>
-                <artifactId>formatter-maven-plugin</artifactId>
-                <version>0.5.2</version>
-                <configuration>
-                    <configFile>${project.build.directory}/connectors-style-convention.xml</configFile>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>format</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-            
     <dependencies>
+        <!-- GitHub Java API -->
         <dependency>
             <groupId>org.eclipse.mylyn.github</groupId>
             <artifactId>org.eclipse.egit.github.core</artifactId>
             <version>2.1.5</version>
         </dependency>
-        <!-- fixes a classloader issue in 9.0.4 -->
+        <!-- Fixes a classloader issue in 0.9.4 -->
         <dependency>
             <groupId>org.mule.tools.devkit</groupId>
             <artifactId>connector-testing-framework</artifactId>
             <version>0.9.5</version>
             <scope>test</scope>
         </dependency>
+        <!-- Hamcrest -->
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-core</artifactId>
