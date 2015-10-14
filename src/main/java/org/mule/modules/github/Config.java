@@ -32,7 +32,7 @@ public class Config {
 
     private ServiceFactory serviceFactory;
 
-    public ServiceFactory getServiceFactory() throws IOException {
+    public ServiceFactory getServiceFactory() {
         return serviceFactory;
     }
 

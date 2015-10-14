@@ -71,7 +71,7 @@ public class ServiceFactory {
         if (!authorizations.isEmpty()) {
             if (scope != null && !scope.isEmpty()) {
                 scopes = Arrays.asList(scope.split(","));
-                if (scopes != null && !scopes.isEmpty()) {
+                if (!scopes.isEmpty()) {
                     for (Authorization auth : authorizations) {
                         // Check the authorization contains all the required
                         // scopes

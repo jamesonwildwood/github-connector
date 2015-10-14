@@ -68,7 +68,7 @@ public class GitHubConnector {
         this.config = config;
     }
 
-    private String getUser(String user) throws IOException {
+    private String getUser(String user) {
         return user != null ? user : config.getServiceFactory().getUser();
     }
 
