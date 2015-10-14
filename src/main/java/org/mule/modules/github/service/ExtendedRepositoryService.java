@@ -6,7 +6,7 @@
  * LICENSE.md file.
  */
 
-package org.mule.modules.github;
+package org.mule.modules.github.service;
 
 import static org.eclipse.egit.github.core.client.IGitHubConstants.SEGMENT_REPOS;
 
@@ -21,21 +21,18 @@ import org.eclipse.egit.github.core.client.GitHubRequest;
 import org.eclipse.egit.github.core.service.RepositoryService;
 
 /**
- * Temporary extension of {@link RepositoryService}, in order to support file
- * content retrieval (http://developer.github.com/v3/repos/contents/) A Pull
- * Request was made to get official support for this
- * (https://github.com/eclipse/egit-github/pull/8), but until it gets merged, we
- * can use this class
+ * Temporary extension of {@link RepositoryService}, in order to support file content retrieval (http://developer.github.com/v3/repos/contents/) A Pull Request was made to get
+ * official support for this (https://github.com/eclipse/egit-github/pull/8), but until it gets merged, we can use this class
  * 
  * @author marianosimone
  * 
  */
 public class ExtendedRepositoryService extends RepositoryService {
 
-	/** */
+    /** */
     private static String SEGMENT_CONTENTS = "/contents"; //$NON-NLS-1$
 
-	public ExtendedRepositoryService() {
+    public ExtendedRepositoryService() {
         super();
     }
 

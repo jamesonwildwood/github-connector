@@ -6,7 +6,7 @@
  * LICENSE.md file.
  */
 
-package org.mule.modules.github;
+package org.mule.modules.github.service;
 
 public enum TeamPermission {
 
