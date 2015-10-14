@@ -1,0 +1,15 @@
+org.eclipse.egit.github.core.holders
+org.eclipse.egit.github.core.transformers
+org.mule.modules.github
+org.mule.modules.github.adapter
+org.mule.modules.github.adapters
+org.mule.modules.github.agents
+org.mule.modules.github.config
+org.mule.modules.github.connectivity
+org.mule.modules.github.devkit
+org.mule.modules.github.pooling
+org.mule.modules.github.processors
+org.mule.modules.github.service
+org.mule.modules.github.service.transformers
+org.mule.modules.github.transformers
+
